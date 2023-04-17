@@ -1,0 +1,2 @@
+D:\tsene_crxfw7g\Desktop\Test2\Test2\obj\Debug\Test2.csproj.AssemblyReference.cache
+D:\tsene_crxfw7g\Desktop\Test2\Test2\obj\Debug\Test2.csproj.CoreCompileInputs.cache
