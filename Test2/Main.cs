@@ -41,9 +41,11 @@ namespace Test2
             Server.RoundStarted += server.OnRoundStarted;
             Server.RespawningTeam += server.OnRespawningTeam;
 
+  
             Player.Died += player.OnDeath;
             Player.Joined += player.OnJoined;
             Player.Left += player.OnLeft;
+
         }
         public void UnRegisterEvents()
         {
