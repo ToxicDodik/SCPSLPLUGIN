@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Appart.cs" />
+    <Compile Include="Commands\Create.cs" />
     <Compile Include="Commands\scp1956.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Handlers\Player.cs" />

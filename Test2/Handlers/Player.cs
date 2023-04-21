@@ -9,13 +9,12 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine.Assertions.Must;
-using static Test2.scp1956;
 
 namespace Test2.Handlers
 {
     public class Player
     {
-        scp1956 scp = new scp1956();
+        private List<Exiled.API.Features.Player> playerlist = scp1956.players1956List;
         public void OnJoined(JoinedEventArgs ev)
         {
             ev.Player.Broadcast(500, "lox");
@@ -24,16 +23,14 @@ namespace Test2.Handlers
         {
             Map.Broadcast(6, $"{ev.Player} has left..");
 
-            Exiled.API.Features.Player player = ev.Player;
-            scp.players1956List.Remove(player);
+            playerlist.Remove(ev.Player);
 
         }
         public void OnDeath(DiedEventArgs ev)
         {
       
             ev.Player.Scale = new UnityEngine.Vector3(1, 1, 1);
-            Exiled.API.Features.Player player = ev.Player;
-            scp.players1956List.Remove(player);
+            playerlist.Remove(ev.Player);
 
         }
 

@@ -18,8 +18,8 @@ namespace Test2
 
         public string Description { get; } = "A command that do something magic";
 
-        public List<Player> players1956List = new List<Player>();
-        public int Points;
+        public static List<Player> players1956List = new List<Player>();
+
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
             if (!Round.IsStarted)

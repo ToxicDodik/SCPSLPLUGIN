@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CommandSystem;
 using Exiled.API.Features;
 using static Test2.Config;
@@ -8,7 +9,8 @@ namespace Test2.Commands
     [CommandHandler(typeof(ClientCommandHandler))]
     internal class Appart : ICommand
     {
-        private scp1956 scp = new scp1956();
+        public static int points;
+        private List<Player> playerlist = scp1956.players1956List;
         public string Command { get; } = "appart";
 
         public string[] Aliases { get; } = new[] { "ap" };
@@ -17,8 +19,9 @@ namespace Test2.Commands
         
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
+           
             Player player = Player.Get(sender);
-            if(scp.players1956List.Contains(player) == true)
+            if(playerlist.Contains(player) == true)
             {
                 
                 if(player.CurrentItem != null)
@@ -28,76 +31,95 @@ namespace Test2.Commands
                     player.CurrentItem.Destroy();
                     switch (item)
                     {
+                        
                         //Карты допуска 
                         case ItemType.KeycardJanitor:
-                            scp.Points = ((int)PointsForItems.PointsKeycardJanitor);
+                            points += (int)PointsForItems.PointsKeycardJanitor;
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             response = "Предмет успешно удален";
                             return true; 
                         case ItemType.KeycardScientist:
-                            scp.Points = ((int)PointsForItems.PointsKeycardScientist);
+                            points += (int)PointsForItems.PointsKeycardScientist;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.KeycardZoneManager:
-                            scp.Points = ((int)PointsForItems.PointsKeycardZoneManager);
+                            points += (int)PointsForItems.PointsKeycardZoneManager;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "У тебя нет прав, ты фемка");
                             return true;
                         case ItemType.KeycardGuard:
-                            scp.Points = ((int)PointsForItems.PointsKeycardGuard);
+                            points += (int)PointsForItems.PointsKeycardGuard;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.KeycardNTFOfficer:
-                            scp.Points = ((int)PointsForItems.PointsKeycardLieutenant);
+                            points += (int)PointsForItems.PointsKeycardLieutenant;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.KeycardNTFLieutenant:
-                            scp.Points = ((int)PointsForItems.PointsKeycardLieutenant);
+                            points += (int)PointsForItems.PointsKeycardLieutenant;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.KeycardNTFCommander:
-                            scp.Points = ((int)PointsForItems.PointsKeycardCapitan);
+                            points += (int)PointsForItems.PointsKeycardCapitan;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.KeycardChaosInsurgency :
-                            scp.Points = ((int)PointsForItems.PointsKeycardChaosInsurgency);
+                            points += (int)PointsForItems.PointsKeycardChaosInsurgency;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.KeycardFacilityManager:
-                            scp.Points = ((int)PointsForItems.PointsKeycardManager);
+                            points += (int)PointsForItems.PointsKeycardManager;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.KeycardO5:
-                            scp.Points = ((int)PointsForItems.PointsKeycardO5);
+                            points += (int)PointsForItems.PointsKeycardO5;
+                            Log.Info(points);
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
 
                         //Оружие 
                         case ItemType.GunCOM15:
-                            scp.Points = ((int)PointsForItems.PointsCOM15);
+                            points += ((int)PointsForItems.PointsCOM15);
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.GunCOM18:
-                            scp.Points = ((int)PointsForItems.PointsCOM18);
+                            points += (int)PointsForItems.PointsCOM18;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.GunFSP9:
-                            scp.Points = ((int)PointsForItems.PointsFSP9);
+                            points += (int)PointsForItems.PointsFSP9;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.GunCrossvec:
-                            scp.Points = ((int)PointsForItems.PointsCrossvec);
+                            points += (int)PointsForItems.PointsCrossvec;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.GunE11SR:
-                            scp.Points = ((int)PointsForItems.PointsE11_SR);
+                            points += (int)PointsForItems.PointsE11_SR;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.GunLogicer:
-                            scp.Points = ((int)PointsForItems.PointsLogicer);
+                            points += (int)PointsForItems.PointsLogicer;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         case ItemType.MicroHID:
-                            scp.Points = ((int)PointsForItems.PointsMicroHID);
+                            points += (int)PointsForItems.PointsMicroHID;
                             response = "Предмет успешно удален";
+                            player.Broadcast(5, "Предмет успешно удален, вы получили очки создания.");
                             return true;
                         default:
                             response = "Error";
@@ -106,13 +128,14 @@ namespace Test2.Commands
                     }
 
                 }
-                response = "У вас есть доступ к данной комманде";
+                player.Broadcast(5, "Пидор у тебя нет предмета в руках");
+                response = " Пидор у тебя нет предмета в руках";
                 return true;
             }
             else 
             {
-                Exiled.API.Features.Log.Info(player + scp.players1956List.ToString());
-                response = "У вас нету доступа к данной комманде";
+                player.Broadcast(5, "У тебя нет прав, ты фемка");
+                response = " У вас нету доступа к данной комманде";
                 return false;
             }
         }
