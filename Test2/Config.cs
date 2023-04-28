@@ -11,9 +11,12 @@ namespace Test2
     {
         public bool IsEnabled { get; set; } = true;
         public bool Debug { get; set; }
+       
+        
         public enum PointsForItems : int
         {
-            KeycardJanitor = ItemType.KeycardJanitor,
+
+ 
             //Карты
             PointsKeycardJanitor = 5,
             PointsKeycardScientist = 10,
@@ -44,5 +47,8 @@ namespace Test2
             PointsRadio = 20,
         }
 
+       
+
     }
+    
 }

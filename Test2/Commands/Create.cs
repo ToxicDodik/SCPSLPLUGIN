@@ -32,13 +32,12 @@ namespace Test2.Commands
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
             points = Appart.points;
-            Appart.points = 10;
            
             Player player = Player.Get(sender);
             if(listplayers.Contains(player) == true)
             {
                 Log.Info(points);
-                if (points != 0)
+                if (points > 0 )
                 {
                     foreach (var item in Enum.GetValues(typeof(PointsForItems)))
                     {

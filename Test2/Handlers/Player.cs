@@ -1,6 +1,7 @@
 ﻿using Exiled.API.Features;
 using Exiled.API.Features.Items;
 using Exiled.Events.EventArgs.Player;
+
 using InventorySystem.Items.Keycards;
 using System;
 using System.Collections.Generic;
@@ -9,11 +10,16 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine.Assertions.Must;
+using Hints;
+using UnityEngine;
+using MEC;
 
 namespace Test2.Handlers
 {
-    public class Player
+    
+    public class Player 
     {
+        
         private List<Exiled.API.Features.Player> playerlist = scp1956.players1956List;
         public void OnJoined(JoinedEventArgs ev)
         {
@@ -21,18 +27,33 @@ namespace Test2.Handlers
         }
         public void OnLeft(LeftEventArgs ev)
         {
-            Map.Broadcast(6, $"{ev.Player} has left..");
+           
 
             playerlist.Remove(ev.Player);
 
         }
+        
         public void OnDeath(DiedEventArgs ev)
         {
-      
+           
+            if (ev.Attacker != null)
+            {
+              
+
+            }
+            else
+            {
+             
+            }
+           
+
+
             ev.Player.Scale = new UnityEngine.Vector3(1, 1, 1);
             playerlist.Remove(ev.Player);
 
         }
+   
 
     }
+
 }

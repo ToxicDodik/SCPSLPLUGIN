@@ -80,7 +80,6 @@ D:\tsene_crxfw7g\Desktop\Test2\Test2\bin\Release\Caress.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Test2.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Test2.pdb
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Assembly-CSharp-firstpass.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Assembly-CSharp.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\CommandSystem.Core.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.API.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.CustomItems.dll
@@ -164,3 +163,16 @@ D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\obj\Release\Test2.csproj.CoreCo
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\obj\Release\Test2.csproj.CopyComplete
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\obj\Release\Test2.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\obj\Release\Test2.pdb
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Assembly-CSharp-Publicized.dll
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\CustomItems.dll
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.CreditTags.dll
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.Updater.dll
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\CustomItems.xml
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.API.xml
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.CreditTags.xml
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.CustomItems.xml
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.CustomRoles.xml
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.Events.xml
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.Loader.xml
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.Permissions.xml
+D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Exiled.Updater.xml
