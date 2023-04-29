@@ -21,6 +21,7 @@ namespace Test2.Handlers
     {
         
         private List<Exiled.API.Features.Player> playerlist = scp1956.players1956List;
+        CustomHint custom = new CustomHint();
         public void OnJoined(JoinedEventArgs ev)
         {
             ev.Player.Broadcast(500, "lox");
@@ -35,18 +36,19 @@ namespace Test2.Handlers
         
         public void OnDeath(DiedEventArgs ev)
         {
-           
+            string text;
             if (ev.Attacker != null)
             {
-              
-
+                text = $"Игрок {ev.Player.Nickname} за класс {ev.Player.Role.Type} был убит игроком {ev.Attacker.Nickname} за класс {ev.Attacker.Role.Type} , причина смерти {ev.DamageHandler.Type}";
+                custom.Hint(text);
             }
             else
             {
-             
+                text = $"Игрок {ev.Player.Nickname} за класс {ev.Player.Role.Type} был убит , причина смерти {ev.DamageHandler.Type}";
+                custom.Hint(text);
             }
-           
 
+            
 
             ev.Player.Scale = new UnityEngine.Vector3(1, 1, 1);
             playerlist.Remove(ev.Player);

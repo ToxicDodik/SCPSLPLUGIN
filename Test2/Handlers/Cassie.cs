@@ -18,7 +18,7 @@ using PlayerStatsSystem;
 
 namespace Test2.Handlers
 {
-    internal class Class1 : MonoBehaviour
+    internal class Cassie : MonoBehaviour
     {
         private string cassie;
         private void OnTriggerEnter(Collider other)
@@ -72,13 +72,13 @@ namespace Test2.Handlers
                     var pickupobjdel = Pickup.Get(pickup);
                     if (pickup.PreviousOwner.Role == RoleTypeId.ChaosConscript || pickup.PreviousOwner.Role == RoleTypeId.ChaosMarauder || pickup.PreviousOwner.Role == RoleTypeId.ChaosRepressor || pickup.PreviousOwner.Role == RoleTypeId.ChaosRifleman)
                     {
-                        Cassie.Message(cas + " ChaosInsurgency . . .g1");
+                        Exiled.API.Features.Cassie.Message(cas + " ChaosInsurgency . . .g1");
                         Log.Info("d");
                         pickupobjdel.Destroy();
                     }
                     else if (pickup.PreviousOwner.Role == RoleTypeId.NtfCaptain || pickup.PreviousOwner.Role == RoleTypeId.NtfSpecialist || pickup.PreviousOwner.Role == RoleTypeId.NtfSergeant || pickup.PreviousOwner.Role == RoleTypeId.NtfPrivate)
                     {
-                        Cassie.Message(cas + " MtfUnit Epsilon 11 . . .g1");
+                        Exiled.API.Features.Cassie.Message(cas + " MtfUnit Epsilon 11 . . .g1");
                         pickupobjdel.Destroy();
                         
                     }

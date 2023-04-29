@@ -1,49 +1,41 @@
 ﻿using Exiled.API.Features;
 using Exiled.Events.EventArgs.Warhead;
-using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Exiled.API.Enums;
-using static Utils.Networking.HintReaderWriter;
-using Hints;
 using UnityEngine;
 
 namespace Test2.Handlers
 {
-    
-    internal class Warhead
+    internal class Warhead : MonoBehaviour
     {
+        CustomHint custom = new CustomHint();
         public void OnDetonated()
         {
-
-            Log.Info("The Alpha Warhead has detonated!");
+            string text = "Альфа боеголвка была взорвана";
+            custom.Hint(text);
         }
 
         public void OnStarting(StartingEventArgs ev)
         {
+            string text = "Альва боеголовка была запущена";
 
-           
-            ev.Player.ReferenceHub.hints.Show(new TextHint($"<color=#aabbcc00>текст будет невидимым</color>"));
-                
-               
+            custom.Hint(text);
           
-            
-            Log.Info("Альва боеголовка была запущена");
         }
 
         public void OnStopping(StoppingEventArgs ev)
         {
-           
-            Log.Info("Альва боеголовка была отменена");
-            
-          
+            string text = "Альва боеголовка была отменена";
+            custom.Hint(text);
+
         }
-        public void OnChangingLeverStatus(ChangingLeverStatusEventArgs ev) {
+        public void OnChangingLeverStatus(ChangingLeverStatusEventArgs ev)
+        {
             Log.Info(ev.CurrentState);
+            string text = "ev";;
+            custom.Hint(text);
         }
-    
+
+
     }
-  
 }

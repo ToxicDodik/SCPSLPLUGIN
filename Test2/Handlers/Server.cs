@@ -29,7 +29,7 @@ namespace Test2.Handlers
             obj.transform.localScale = new Vector3(5, 2, 5);
 
 
-            obj.gameObject.AddComponent<Class1>();
+            obj.gameObject.AddComponent<Cassie>();
      
             obj.GetComponent<Collider>().isTrigger = true;
             player.Teleport(obj);

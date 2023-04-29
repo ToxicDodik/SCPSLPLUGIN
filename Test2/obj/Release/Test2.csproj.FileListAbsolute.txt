@@ -95,18 +95,10 @@ D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.Physics
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.ParticleSystemModule.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.AudioModule.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.AnimationModule.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.UI.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.UIModule.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\NorthwoodLib.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.UnityWebRequestModule.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.UnityWebRequestAudioModule.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Unity.TextMeshPro.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\BouncyCastle.Crypto.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Unity.Postprocessing.Runtime.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\System.Memory.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\YamlDotNet.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\zxing.unity.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\Caress.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.InputLegacyModule.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.IMGUIModule.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.ScreenCaptureModule.dll
@@ -157,7 +149,6 @@ D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.WindMod
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.XRModule.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.ARModule.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\UnityEngine.InputModule.dll
-D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\bin\Release\System.Numerics.Vectors.dll
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\obj\Release\Test2.csproj.AssemblyReference.cache
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\obj\Release\Test2.csproj.CoreCompileInputs.cache
 D:\tsene_crxfw7g\Desktop\Test2\SCPSLPLUGIN\Test2\obj\Release\Test2.csproj.CopyComplete
