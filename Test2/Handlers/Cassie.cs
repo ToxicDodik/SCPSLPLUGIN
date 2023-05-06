@@ -1,36 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using UnityEngine;
 using Exiled.API.Features;
 using static Test2.Config;
-using System.Reflection;
 using InventorySystem.Items.Pickups;
-using Exiled.API.Features.Roles;
 using PlayerRoles;
-using System.Security.Policy;
-using Exiled.Events.EventArgs.Player;
-using PlayerRoles.PlayableScps.Scp939.Ripples;
 using Exiled.API.Features.Pickups;
-using PlayerStatsSystem;
+
 
 namespace Test2.Handlers
 {
     internal class Cassie : MonoBehaviour
     {
         private string cassie;
+   
         private void OnTriggerEnter(Collider other)
         {
-
+            
 
             
             if (other.GetComponentInParent<ItemPickupBase>())
             {
                 var pickup = other.GetComponentInParent<ItemPickupBase>();
+                var pickupobjdel = Pickup.Get(pickup);
+                pickupobjdel.Destroy();
                 switch (pickup.Info.ItemId)
                 {
+
                     case ItemType.SCP500:
                         cassie = "cassie SCP 5 0 0 has been evacuated by";
                         break;
@@ -57,34 +52,40 @@ namespace Test2.Handlers
                         break;
                     case ItemType.SCP1576:
                         cassie = "cassie SCP 1 5 7 6 has been evacuated by";
+                       
                         break;
                     case ItemType.SCP018:
                         cassie = "cassie SCP 0 1 8 has been evacuated by";
+                        
+
                         break;
                     default:
                         break;
                 }
                
-                if(!string.IsNullOrEmpty(cassie))
+                if(cassie != "")
                 {
-                    var cas = cassie;
-                    cassie = "";
-                    var pickupobjdel = Pickup.Get(pickup);
+                   
+                  
                     if (pickup.PreviousOwner.Role == RoleTypeId.ChaosConscript || pickup.PreviousOwner.Role == RoleTypeId.ChaosMarauder || pickup.PreviousOwner.Role == RoleTypeId.ChaosRepressor || pickup.PreviousOwner.Role == RoleTypeId.ChaosRifleman)
                     {
-                        Exiled.API.Features.Cassie.Message(cas + " ChaosInsurgency . . .g1");
+                       
+                        Exiled.API.Features.Cassie.Message(cassie + " ChaosInsurgency . . .g1");
                         Log.Info("d");
-                        pickupobjdel.Destroy();
+                        
                     }
                     else if (pickup.PreviousOwner.Role == RoleTypeId.NtfCaptain || pickup.PreviousOwner.Role == RoleTypeId.NtfSpecialist || pickup.PreviousOwner.Role == RoleTypeId.NtfSergeant || pickup.PreviousOwner.Role == RoleTypeId.NtfPrivate)
                     {
-                        Exiled.API.Features.Cassie.Message(cas + " MtfUnit Epsilon 11 . . .g1");
-                        pickupobjdel.Destroy();
+                        
+                        Exiled.API.Features.Cassie.Message(cassie + " MtfUnit Epsilon 11 . . .g1");
+                    
                         
                     }
+                   ;
                 }
                 
             }
-        }
+
+
     }
-}
+}}

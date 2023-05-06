@@ -4,8 +4,7 @@ using Exiled.API.Enums;
 
 using Server = Exiled.Events.Handlers.Server;
 using Player = Exiled.Events.Handlers.Player;
-using Warhead = Exiled.Events.Handlers.Warhead;
-using Map = Exiled.Events.Handlers.Map;
+
 
 
 namespace Test2
@@ -18,8 +17,8 @@ namespace Test2
 
         private Handlers.Server server;
         private Handlers.Player player;
-        private Handlers.Warhead warhead;
-        private Handlers.Map map;
+       
+      
         public override void OnEnabled()
         {
             RegisterEvents();
@@ -35,23 +34,11 @@ namespace Test2
         {
             server = new Handlers.Server();
             player = new Handlers.Player();
-            warhead = new Handlers.Warhead();
-            map = new Handlers.Map();
+          
 
             Server.WaitingForPlayers += server.OnWaitingForPlayers;
             Server.RoundStarted += server.OnRoundStarted;
             Server.RespawningTeam += server.OnRespawningTeam;
-
-            Player.Joined += player.OnJoined;
-            Player.Left += player.OnLeft;
-            Player.Died += player.OnDeath;
-
-            Warhead.Starting += warhead.OnStarting;
-            Warhead.Stopping += warhead.OnStopping;
-            Warhead.Detonated += warhead.OnDetonated;
-            Warhead.ChangingLeverStatus += warhead.OnChangingLeverStatus;
-            Map.Decontaminating += map.OnDecontaminating;
-            Map.GeneratorActivated += map.OnGeneratorActivated;
 
         }
 
@@ -60,22 +47,9 @@ namespace Test2
             Server.WaitingForPlayers -= server.OnWaitingForPlayers;
             Server.RoundStarted -= server.OnRoundStarted;
             Server.RespawningTeam -= server.OnRespawningTeam;
-
-            Player.Died -= player.OnDeath;
-            Player.Joined -= player.OnJoined;
-            Player.Left -= player.OnLeft;
-
-            Warhead.Starting -= warhead.OnStarting;
-            Warhead.Stopping -= warhead.OnStopping;
-            Warhead.Detonated -= warhead.OnDetonated;
-            Warhead.ChangingLeverStatus -= warhead.OnChangingLeverStatus;
-            
-            Map.Decontaminating -= map.OnDecontaminating;
-            Map.GeneratorActivated -= map.OnGeneratorActivated;
-            warhead = null;
             server = null;
             player = null;
-            map = null;
+           
 
         }
 

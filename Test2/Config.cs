@@ -13,39 +13,7 @@ namespace Test2
         public bool Debug { get; set; }
        
         
-        public enum PointsForItems : int
-        {
-
- 
-            //Карты
-            PointsKeycardJanitor = 5,
-            PointsKeycardScientist = 10,
-            PointsKeycardZoneManager = 15,
-            PointsKeycardGuard = 20,
-            PointsKeycardOfficer = 50,
-            PointsKeycardLieutenant = 60,
-            PointsKeycardCapitan = 80,
-            PointsKeycardChaosInsurgency = 80,
-            PointsKeycardManager = 90,
-            PointsKeycardO5 = 100,
-            //Оружие
-            PointsCOM15 = 10,
-            PointsCOM18 = 10,
-            PointsFSP9 = 30,
-            PointsCrossvec = 40,
-            PointsE11_SR = 50,
-            PointsLogicer = 100,
-            PointsMicroHID = 200,
-            //SCP предметы
-            PointsSCP018 = 170,
-            PointsSCP207 = 180,
-            PointsSCP268 = 250,
-            PointsSCP500 = 190,
-            //все остальное 
-            PointsAdrenaline = 60,
-            PointsFlashlight = 70,
-            PointsRadio = 20,
-        }
+      
 
        
 
